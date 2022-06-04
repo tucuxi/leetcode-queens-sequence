@@ -17,10 +17,11 @@ fun solveNQueens(n: Int) = sequence {
             )
         } else {
             (0 until n)
-                .filter { safe(k, it) }
                 .forEach {
-                    queens[k] = it
-                    rec(k + 1)
+                    if (safe(k, it)) {
+                        queens[k] = it
+                        rec(k + 1)
+                    }
                 }
         }
     }
