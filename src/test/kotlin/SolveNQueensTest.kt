@@ -23,6 +23,8 @@ internal class SolveNQueensTest {
 
     @Test
     fun `8 by 8 board has 92 distinct solutions`() {
-        assertEquals(92, solver.solveNQueens(8).toSet().size)
+        val res = solver.solveNQueens(8).toList()
+        assertEquals(92, res.size)
+        assertEquals(92, res.toSet().size)
     }
 }
