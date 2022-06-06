@@ -1,7 +1,7 @@
 import kotlin.math.abs
 
 class SolveNQueens {
-    fun solveNQueens(n: Int) = sequence {
+    fun solve(n: Int) = sequence {
         val queens = IntArray(n)
 
         fun safe(row: Int, col: Int): Boolean =
