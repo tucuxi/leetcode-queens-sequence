@@ -17,13 +17,12 @@ class SolveNQueens {
                     }
                 )
             } else {
-                (0 until n)
-                    .forEach {
-                        if (safe(k, it)) {
-                            queens[k] = it
-                            rec(k + 1)
-                        }
+                for (i in 0 until n) {
+                    if (safe(k, i)) {
+                        queens[k] = i
+                        rec(k + 1)
                     }
+                }
             }
         }
 
